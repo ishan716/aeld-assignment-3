@@ -17,7 +17,7 @@ if [ $# -lt 1 ]
 then
 	echo "Using default directory ${OUTDIR} for output"
 else
-	OUTDIR=$1
+	OUTDIR=$(realpath -m "$1")
 	echo "Using passed directory ${OUTDIR} for output"
 fi
 
